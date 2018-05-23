@@ -61,8 +61,8 @@ function copyStaticTask(dest) {
 
 function cleanTask() {
     return del([
-        'dist',
-        'src/css'
+        'src/css',
+        'src/*.html',
     ]);
 }
 
@@ -71,6 +71,7 @@ gulp.task('lib', libTask('src/lib'));
 gulp.task('style', styleTask('src/css'));
 gulp.task('html', htmlTask('src'));
 gulp.task('build', ['style', 'html']);
+gulp.task('default', ['build']);
 gulp.task('watch', function() {
   gulp.watch('src/pug/**/*.pug', ['html']);
   gulp.watch('src/sass/**/*.sass', ['style']);
