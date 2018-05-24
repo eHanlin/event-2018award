@@ -141,6 +141,9 @@
   font-family: 微軟正黑體;
   letter-spacing: 1px; }
 
+html, body {
+  height: 100%; }
+
 nav.navbar {
   transition: 0.5s;
   border-bottom: none;
