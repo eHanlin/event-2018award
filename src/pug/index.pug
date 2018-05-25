@@ -4,6 +4,7 @@ head
   link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
   link(rel='stylesheet prefetch', href='https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css')
   link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+  link(rel='stylesheet prefetch', href='https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css')
   link(rel='stylesheet', href='./css/style.css')
   
 body(data-spy='scroll', data-target='#navbar')
@@ -49,12 +50,12 @@ header.jumbotron
       
 section#section_about
   .container
-    .row(data-0="opacity: 0;transform: translateY(-100px)" data-500="opacity: 1;transform: translateY(0px)")
+    .row(data-aos="slide-up")
       .col-sm-8.col-sm-offset-4 
         h2.ab_title 享受學習吧! 翰林雲端學院的孩子們
       .col-sm-8.col-sm-offset-4
         h4.ab_p 不知不覺又成長了一歲，在這裡學習到更多的知識與收穫<br>相信夢想離你更進一步了呢!<br><br>為感謝各位同學對翰林雲端學院的支持與鼓勵<br>翰林雲端特別設立了「踏進雲端 無限學習」獎學金及獎勵辦法<br>以鼓勵所有使用翰林雲端學院而使學業成績進步／優異的同學<br><br>在未來的求學旅途中，繼續讓我們陪著你一起前進!
-    .hot_ball(data-0="opacity: 0;transform: translateX(-100px) rotate(0deg)" data-500="opacity: 1;transform: translateX(0px) rotate(-15deg)")
+    .hot_ball(data-aos="fade-right")
   .mb_about
   
 section#section_awards
@@ -81,8 +82,8 @@ section#section_awards
           ul {{ numbers }}
             li(v-if='item.number') {{ item.number }}
             li(v-else='') {{ number }}
-        a(v-if="!item.cant", :href='item.url')
-          .btn_signup(target='_blank') 我要報名
+        a(v-if="!item.cant", :href='item.url')(target='_blank')
+          .btn_signup 我要報名
             .sign
           
     .row
@@ -103,8 +104,8 @@ section#section_awards
           ul {{ numbers }}
             li(v-if='item.number') {{ item.number }}
             li(v-else='') {{ number }}
-        a(v-if="!item.cant", :href='item.url')
-          .btn_signup(target='_blank') 我要報名
+        a(v-if="!item.cant", :href='item.url')(target='_blank')
+          .btn_signup 我要報名
             .sign
     .row
       .book_open
@@ -112,11 +113,11 @@ section#section_awards
       
 section#section_timeline
   .container
-    .row(data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1")
+    .row
       .col-sm-12
         h2.tl_title 獎學金申請時程
           .sun
-    .row(data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1")
+    .row
       .middle_line
         .date.date1 06/08
         .box.box1
@@ -174,11 +175,11 @@ section#section_timeline
         
 section#section_notice
   .container
-    .row(data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1")
+    .row(data-aos="slide-up")
       .col-sm-12
         .btn(type="button" onclick='toggle()') 注意事項
           .notice_icon
-    .row#box(data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1")
+    .row#box(data-aos="slide-up")
       .col-sm-12
         ul
           li 申請人(未成年者包含其法定代理人，以下同)於參加本活動之同時，即表示已詳閱及同意本活動辦法之相關規定，並明確瞭解及同意主辦單位因辦理本活動之一切需要、為履行法定義務、契約義務、其他法令許可目的，及訴訟、非訟、仲裁或其他紛爭解決事件之處理（下稱蒐集目的），得將 申請人提供之姓名、身分證統一編號、戶籍地址、聯絡方式(如:地址、行動電話及之相關權益(如:預備未來供本活動申請人查詢、得獎通知)之期間內 (以孰 後屆至者為準)，供主辦單位、本活動之委外廠商及依法有權機關(構)與金融監理機關，以自動化機 器或其他非自動化之利用方式，於前揭利用對象之國內及國外所在地，依個人資料保護相關法規蒐 集、處理及利用。但主辦單位未經申請人之同意，不得利用其所提供之個電子信箱) 及其他 於活動相關書件內容所載或依法可得蒐集之個人資料，於前開個人資料蒐集特定目的存續期間、相關法令規定期間及為申請人人資料進行商業行銷行為。
@@ -215,6 +216,7 @@ footer#footer
   script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js')
+  script(src='https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js')
   script(src='./js/index.js')
 
         

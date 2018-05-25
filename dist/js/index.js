@@ -1,4 +1,7 @@
-var s = skrollr.init();
+//滾動視差
+AOS.init({
+  duration: 1000,
+});
 
 //緩慢滑動
 $(document).on('click', '#contect', function(event){
@@ -50,7 +53,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人期末考成績單副本"
           ],
-          url: "https://www.facebook.com/ehanlin.com.tw"
+          url: "https://goo.gl/forms/ypGLNTzyAYFhfHLs1"
         },
         jn_unlimit: {
           award_name: "無可限量獎",
@@ -60,7 +63,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人期末考成績單及前一次定期/期中考試成績單副本"
           ],
-          url: ""
+          url: "https://goo.gl/forms/1uV3ALVRirYgkEo13"
         },
         manowar: {
           award_name: "會考戰神獎",
@@ -70,7 +73,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人會考成績單副本"
           ],
-          url: ""
+          url: "https://goo.gl/forms/0v3wdpXbISX0Ajc93"
         },
         test_unlimit: {
           award_name: "會考無可限量獎",
@@ -80,7 +83,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人正式會考成績及模擬會任一次會考考試成績單副本"
           ],
-          url: ""
+          url: "https://goo.gl/forms/WsfNBPA35KSCK80m1"
         },
         join: {
           award_name: "參加獎",
@@ -96,14 +99,14 @@ var vm = new Vue({
       };
       self.high_data = {
         gold_mind: {
-          award_name: "金頭腦獎",
+          award_name: "金腦獎",
           detail: "學習金頭腦，讀書考試難不倒",
           applicant: [
             "1. 106學年下學期期末考總平均80分(含)以上者",
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之高中學生",
             "3. 請提供申請人期末考成績單副本"
           ],
-          url: ""
+          url: "https://goo.gl/forms/QIvN8cveYN7F0IoV2"
         },
         hi_unlimit: {
           award_name: "高中無可限量獎",
@@ -113,7 +116,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之高中學生",
             "3. 請提供申請人期末考成績單及前一次定期/期中考試成績單副本"
           ],
-          url: ""
+          url: "https://goo.gl/forms/HspNnjkc6Fac2FcQ2"
         },
         join: {
           award_name: "參加獎",
@@ -130,10 +133,3 @@ var vm = new Vue({
     }
   }
 });
-
-
-
-// //注意事項
-// function toggle(){
-//     document.getElementById("box").classList.toggle('slideDown')
-// }

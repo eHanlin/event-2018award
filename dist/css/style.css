@@ -180,7 +180,7 @@ header.jumbotron {
   background-position: 50% 95%; }
   header.jumbotron .container {
     position: relative;
-    padding: 200px 0px; }
+    padding: 100px 50px; }
     header.jumbotron .container .plane_girl {
       background-repeat: no-repeat;
       background-size: contain;
@@ -196,7 +196,7 @@ header.jumbotron {
       left: 25%;
       z-index: 1;
       bottom: 5%;
-      padding: 100px 150px;
+      padding: 80px 120px;
       position: absolute;
       animation-delay: 1s;
       background-image: url("../img/header/slogan.png"); }
