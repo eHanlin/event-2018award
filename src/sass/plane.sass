@@ -19,14 +19,14 @@ html,body
     height: 100%
     position: relative
     transform-style: preserve-3d
-    animation: rotate 6s infinite
+    //animation: rotate 6s infinite
     transform-origin: center 49px
       
     .left
       left: 25%
       top: 25%
       position: absolute
-      animation: down 6s infinite
+      //animation: down 6s infinite
       transform-origin: 100% 0%
       transform-style: preserve-3d
       z-index: 1
@@ -35,7 +35,7 @@ html,body
       left: 25%
       top: 25%
       position: absolute
-      animation: right_down 6s infinite
+      //animation: right_down 6s infinite
       transform-origin: 100% 0%
       transform-style: preserve-3d
       z-index: 1
@@ -46,7 +46,7 @@ html,body
       transform: rotateY(80%)
       transform-origin: 100% 0%
       transform-style: preserve-3d
-      animation: slide 6s infinite
+      //animation: slide 6s infinite
 
 svg
   width: 70px
@@ -103,4 +103,14 @@ svg
     
   90%
     transform: rotateX(0deg) rotateY(0deg)
- 
+
+.fly
+  &.plane
+    animation: rotate 6s normal forwards
+  &.left
+    animation: down 6s normal forwards
+  &.right
+    animation: right_down 6s normal forwards
+  &.bottom
+    animation: slide 6s normal forwards
+
