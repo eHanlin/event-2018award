@@ -193,9 +193,9 @@ header.jumbotron {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      left: 25%;
+      right: 17%;
+      top: 15%;
       z-index: 1;
-      bottom: 5%;
       padding: 80px 120px;
       position: absolute;
       animation-delay: 1s;
@@ -226,7 +226,7 @@ header.jumbotron {
       background-position: center;
       position: absolute;
       top: 20%;
-      left: 60%;
+      left: 40%;
       padding: 25px 60px;
       background-image: url("../img/header/cloud3.png"); }
     header.jumbotron .container .cloud4 {
@@ -766,7 +766,9 @@ footer#footer {
   header.jumbotron .container {
     padding: 150px 0px; }
     header.jumbotron .container .title107 {
-      padding: 90px 150px; }
+      padding: 70px 120px;
+      right: 15%;
+      top: 25%; }
   section#section_awards .container#awards .row {
     margin: 0px 150px; }
     section#section_awards .container#awards .row .col-sm-12 .sun {
@@ -790,7 +792,9 @@ footer#footer {
     header.jumbotron .container .plane_girl {
       padding: 150px; }
     header.jumbotron .container .title107 {
-      padding: 90px 150px; }
+      padding: 70px 110px;
+      right: 13%;
+      top: 23%; }
   section#section_about .container {
     padding: 50px 10px; }
     section#section_about .container .row .col-sm-8.col-sm-offset-4 .ab_title {
@@ -810,7 +814,13 @@ footer#footer {
 
 @media screen and (max-width: 768px) {
   header.jumbotron .container .title107 {
-    padding: 80px 150px; }
+    padding: 70px 110px;
+    right: 13%;
+    top: 23%; }
+  section#section_about .container {
+    padding: 50px 130px; }
+    section#section_about .container .hot_ball {
+      left: 5%; }
   section#section_timeline {
     position: relative; }
     section#section_timeline .container {

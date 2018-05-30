@@ -18,7 +18,7 @@ $(".plane_girl").velocity({
   top: 20
 },1000)
 
-$(".title107").addClass("animated fadeInUp")
+$(".title107").addClass("animated fadeInRight")
 
 // 獎項內容
 var vm = new Vue({
