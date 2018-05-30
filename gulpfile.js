@@ -54,7 +54,7 @@ function styleTask(dest){
 
 function copyStaticTask(dest) {
     return function() {
-        return gulp.src(['src/**/*.html', 'src/img/**', 'src/js/**'], {base: "src"})
+        return gulp.src(['src/*.html', 'src/img/**', 'src/js/**'], {base: "src"})
             .pipe(gulp.dest(dest));
     };
 }
@@ -62,7 +62,7 @@ function copyStaticTask(dest) {
 function cleanTask() {
     return del([
         'src/css',
-        'src/*.html',
+        'src/*.html'
     ]);
 }
 
@@ -85,7 +85,8 @@ gulp.task('package', function() {
         return Q.all([
             //util.logStream(libTask('dist/lib')),
             util.logStream(copyStaticTask('dist')),
-            util.logStream(styleTask('dist/css'))
+            util.logStream(styleTask('dist/css')),
+            util.logStream(htmlTask('dist'))
         ])
     });
 

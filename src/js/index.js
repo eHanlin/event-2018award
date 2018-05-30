@@ -3,22 +3,36 @@ AOS.init({
   duration: 1000,
 });
 
-//緩慢滑動
-$(document).on('click', '#contect', function(event){
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 700);
+$(function() {
+    //緩慢滑動
+    $(document).on('click', '#contect', function(event){
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 700);
+    });
+
+    //animation
+    $(".plane_girl").velocity({
+        opacity: [1,0],
+        top: 20
+    },1000);
+
+    
+    $(".title107").addClass("animated fadeInRight")
+    
+    //fly
+    $(".btn_signup").click(function(event) {
+        event.preventDefault();
+        var form = $(this).parent("a").attr("href");
+        var $frame = $("iframe.plane-animation");
+        $frame.show();
+        $frame.contents().find(".plane").one("animationend", function() {
+            window.location.href = form;
+        });
+        $frame.contents().find(".plane,.right,.left,.bottom").addClass("fly");
+    })
 });
-
-
-//animation
-$(".plane_girl").velocity({
-  opacity: [1,0],
-  top: 20
-},1000)
-
-$(".title107").addClass("animated fadeInRight")
 
 // 獎項內容
 var vm = new Vue({

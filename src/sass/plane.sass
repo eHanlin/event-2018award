@@ -22,7 +22,6 @@ html,body
     height: 100%
     position: relative
     transform-style: preserve-3d
-    animation: rotate 3s forwards 
     transform-origin: center 49px
     
     svg
@@ -33,7 +32,6 @@ html,body
       left: 25%
       top: 25%
       position: absolute
-      animation: down 3s forwards 
       transform-origin: 100% 0%
       transform-style: preserve-3d
       z-index: 1
@@ -42,7 +40,6 @@ html,body
       left: 25%
       top: 25%
       position: absolute
-      animation: right_down 3s forwards 
       transform-origin: 100% 0%
       transform-style: preserve-3d
       z-index: 1
@@ -53,7 +50,6 @@ html,body
       position: absolute
       transform-origin: 100% 0%
       transform-style: preserve-3d
-      animation: slide 3s forwards 
       
 
 
@@ -100,3 +96,16 @@ html,body
   100%
     top: 0%
     transform: rotateX(45deg) rotateZ(45deg) translateY(-570px)
+
+
+
+.fly
+  &.plane
+    animation: rotate 3s normal forwards
+  &.left
+    animation: down 3s normal forwards
+  &.right
+    animation: right_down 3s normal forwards
+  &.bottom
+    animation: slide 3s normal forwards
+
