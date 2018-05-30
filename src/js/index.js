@@ -4,34 +4,43 @@ AOS.init({
 });
 
 $(function() {
-    //緩慢滑動
-    $(document).on('click', '#contect', function(event){
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 700);
+  //緩慢滑動
+  $(document).on('click', '#contect', function(event){
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 700);
+  });
+
+  //animation
+  $(".plane_girl").velocity({
+    opacity: [1,0],
+    top: 20
+  },1000);
+
+
+  $(".title107").addClass("animated fadeInRight")
+
+  //fly
+  $(".btn_signup").click(function(event) {
+    event.preventDefault();
+    var form = $(this).parent("a").attr("href");
+    var $frame = $("iframe.plane-animation");
+    $frame.show();
+    $frame.contents().find(".plane").one("animationend", function() {
+        $.get("/Users/me", function(resp) {
+            if (resp.success) {
+              form += encodeURIComponent(resp.result.email);
+              window.location.href = form;
+            } else {
+              form += "session.email";
+              window.location.href = "/Users/login.html?redirect=" + encodeURIComponent(form);
+            }
+        });
     });
 
-    //animation
-    $(".plane_girl").velocity({
-        opacity: [1,0],
-        top: 20
-    },1000);
-
-    
-    $(".title107").addClass("animated fadeInRight")
-    
-    //fly
-    $(".btn_signup").click(function(event) {
-        event.preventDefault();
-        var form = $(this).parent("a").attr("href");
-        var $frame = $("iframe.plane-animation");
-        $frame.show();
-        $frame.contents().find(".plane").one("animationend", function() {
-            window.location.href = form;
-        });
-        $frame.contents().find(".plane,.right,.left,.bottom").addClass("fly");
-    })
+    $frame.contents().find(".plane,.right,.left,.bottom").addClass("fly");
+  })
 });
 
 // 獎項內容
@@ -39,13 +48,13 @@ var vm = new Vue({
 	el: "#awards",
   data: {
   	outer_data: {},
-		
+
 		// 獎項名稱
     apply: "《申請資格》",
     bonus: "《獎金/獎品》",
     numbers: "《名額數量》",
 
-    // 獎金獎品	
+    // 獎金獎品
     money: [
       "1. $3,000圓新台幣",
       "2. 精美獎牌乙只"
@@ -67,7 +76,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人期末考成績單副本"
           ],
-          url: "https://goo.gl/forms/ypGLNTzyAYFhfHLs1"
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSeW86cUNE1s2rdnaWxb1LIbPU_doiY8lRo3176qbsMnQH6csQ/viewform?usp=pp_url&entry.534371074="
         },
         jn_unlimit: {
           award_name: "無可限量獎",
@@ -77,7 +86,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人期末考成績單及前一次定期/期中考試成績單副本"
           ],
-          url: "https://goo.gl/forms/1uV3ALVRirYgkEo13"
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSdkdAFx6wIQscBmkU6hPbSNi9_0KO5Ja43nipO5uVhTupuhjg/viewform?usp=pp_url&entry.534371074="
         },
         manowar: {
           award_name: "會考戰神獎",
@@ -87,7 +96,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人會考成績單副本"
           ],
-          url: "https://goo.gl/forms/0v3wdpXbISX0Ajc93"
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSeSQK1IRv-M77MJaavtk_6GkfAH6mLbuPUtcBvvWtFWrlewIQ/viewform?usp=pp_url&entry.534371074="
         },
         test_unlimit: {
           award_name: "會考無可限量獎",
@@ -97,7 +106,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人正式會考成績及模擬會任一次會考考試成績單副本"
           ],
-          url: "https://goo.gl/forms/WsfNBPA35KSCK80m1"
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSfwFgjONWL2zIvHrMvp_igctUY90kUjQqvZhJ1JZGItkz3JVQ/viewform?usp=pp_url&entry.534371074="
         },
         join: {
           award_name: "參加獎",
@@ -120,7 +129,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之高中學生",
             "3. 請提供申請人期末考成績單副本"
           ],
-          url: "https://goo.gl/forms/QIvN8cveYN7F0IoV2"
+          url: "https://docs.google.com/forms/d/e/1FAIpQLScPA09lf3SjYPSy4WcuJGNLYddoyopvLEEoYouRQZ2RyGZuxg/viewform?usp=pp_url&entry.534371074="
         },
         hi_unlimit: {
           award_name: "高中無可限量獎",
@@ -130,7 +139,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之高中學生",
             "3. 請提供申請人期末考成績單及前一次定期/期中考試成績單副本"
           ],
-          url: "https://goo.gl/forms/HspNnjkc6Fac2FcQ2"
+          url: "https://docs.google.com/forms/d/e/1FAIpQLScuEBhcNObCAIADj_aQKJl-DTv9t6Vrz-JDC-fNmiCu3ujBhg/viewform?usp=pp_url&entry.534371074="
         },
         join: {
           award_name: "參加獎",
