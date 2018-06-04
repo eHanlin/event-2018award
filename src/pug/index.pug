@@ -84,7 +84,7 @@ html(lang="zh-tw")
               ul {{ numbers }}
                 li(v-if='item.number') {{ item.number }}
                 li(v-else='') {{ number }}
-            a(v-if="!item.cant", :href='item.url')(target='_blank')
+            a(v-if="!item.cant", :data-href='item.url')(target='_blank')
               .btn_signup 我要報名
                 .sign
               
@@ -106,7 +106,7 @@ html(lang="zh-tw")
               ul {{ numbers }}
                 li(v-if='item.number') {{ item.number }}
                 li(v-else='') {{ number }}
-            a(v-if="!item.cant", :href='item.url')(target='_blank')
+            a(v-if="!item.cant", :data-href='item.url')(target='_blank')
               .btn_signup 我要報名
                 .sign
         .row

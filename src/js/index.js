@@ -24,7 +24,7 @@ $(function() {
   //fly
   $(".btn_signup").click(function(event) {
     event.preventDefault();
-    var form = $(this).parent("a").attr("href");
+    var form = $(this).parent("a").data("href");
     var $frame = $("iframe.plane-animation");
     $frame.show();
     $frame.contents().find(".plane").one("animationend", function() {
