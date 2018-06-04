@@ -562,6 +562,8 @@ section#section_timeline {
         position: relative; }
       section#section_timeline .container .middle_line .box1 {
         background-color: #d8311b; }
+        section#section_timeline .container .middle_line .box1 .subtitle {
+          left: 40px; }
       section#section_timeline .container .middle_line .box2 {
         background-color: #e16a1d; }
       section#section_timeline .container .middle_line .box3 {
