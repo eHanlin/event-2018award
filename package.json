@@ -13,6 +13,7 @@
   "author": "ujhong636 <ujhong636@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@google-cloud/storage": "^1.7.0",
     "browserify": "^16.2.2",
     "del": "^3.0.0",
     "event-stream": "^3.3.4",
@@ -20,9 +21,9 @@
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
     "gulp-template-util": "0.0.2",
-    "pug": "^2.0.3",
     "jquery": "^3.3.1",
     "path": "^0.12.7",
+    "pug": "^2.0.3",
     "q": "^1.5.1"
   }
 }
