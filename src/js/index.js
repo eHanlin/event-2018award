@@ -22,26 +22,47 @@ $(function() {
   $(".title107").addClass("animated fadeInRight")
 
   //fly
-  $(".btn_signup").click(function(event) {
-    event.preventDefault();
-    var form = $(this).parent("a").data("href");
-    var $frame = $("iframe.plane-animation");
-    $frame.show();
-    $frame.contents().find(".plane").one("animationend", function() {
-        $.get("/Users/me", function(resp) {
-            if (resp.success) {
-              form += encodeURIComponent(resp.result.email);
-              window.location.href = form;
-            } else {
-              form += "session.email";
-              window.location.href = "/Users/login.html?redirect=" + encodeURIComponent(form);
-            }
-        });
-    });
+  // $(".btn_signup").click(function(event) {
+  //   event.preventDefault();
+  //   var form = $(this).parent("a").data("href");
+  //   var $frame = $("iframe.plane-animation");
+  //   $frame.show();
+  //   $frame.contents().find(".plane").one("animationend", function() {
+  //       $.get("/Users/me", function(resp) {
+  //           if (resp.success) {
+  //             form += encodeURIComponent(resp.result.email);
+  //             window.location.href = form;
+  //           } else {
+  //             form += "session.email";
+  //             window.location.href = "/Users/login.html?redirect=" + encodeURIComponent(form);
+  //           }
+  //       });
+  //   });
 
-    $frame.contents().find(".plane,.right,.left,.bottom").addClass("fly");
-  })
+  //   $frame.contents().find(".plane,.right,.left,.bottom").addClass("fly");
+  // })
 });
+
+// 報名截止燈箱
+$(document).ready(function() { 
+  $('.btn_signup').click(function() { 
+      $.blockUI({ 
+          onOverlayClick: $.unblockUI,
+          message: '報名截止</h1>',
+          css: { 
+            border: 'none', 
+            paddingTop: '30px',
+            paddingBottom: '30px',
+            color: '#333',
+            fontSize: '24px',
+
+          }
+      }); 
+  });    
+}); 
+
+
+
 
 // 獎項內容
 var vm = new Vue({
@@ -76,7 +97,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人期末考成績單副本"
           ],
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSeW86cUNE1s2rdnaWxb1LIbPU_doiY8lRo3176qbsMnQH6csQ/viewform?usp=pp_url&entry.534371074="
+          url: " "
         },
         jn_unlimit: {
           award_name: "無可限量獎",
@@ -86,7 +107,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人期末考成績單及前一次定期/期中考試成績單副本"
           ],
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSdkdAFx6wIQscBmkU6hPbSNi9_0KO5Ja43nipO5uVhTupuhjg/viewform?usp=pp_url&entry.534371074="
+          url: " "
         },
         manowar: {
           award_name: "會考戰神獎",
@@ -96,7 +117,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人會考成績單副本"
           ],
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSeSQK1IRv-M77MJaavtk_6GkfAH6mLbuPUtcBvvWtFWrlewIQ/viewform?usp=pp_url&entry.534371074="
+          url: " "
         },
         test_unlimit: {
           award_name: "會考無可限量獎",
@@ -106,7 +127,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之國中學生",
             "3. 請提供申請人正式會考成績及模擬會任一次會考考試成績單副本"
           ],
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSfwFgjONWL2zIvHrMvp_igctUY90kUjQqvZhJ1JZGItkz3JVQ/viewform?usp=pp_url&entry.534371074="
+          url: " "
         },
         join: {
           award_name: "參加獎",
@@ -129,7 +150,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之高中學生",
             "3. 請提供申請人期末考成績單副本"
           ],
-          url: "https://docs.google.com/forms/d/e/1FAIpQLScPA09lf3SjYPSy4WcuJGNLYddoyopvLEEoYouRQZ2RyGZuxg/viewform?usp=pp_url&entry.534371074="
+          url: " "
         },
         hi_unlimit: {
           award_name: "高中無可限量獎",
@@ -139,7 +160,7 @@ var vm = new Vue({
             "2. 有正式開通翰林雲端學院e名師、e評量及模擬考之高中學生",
             "3. 請提供申請人期末考成績單及前一次定期/期中考試成績單副本"
           ],
-          url: "https://docs.google.com/forms/d/e/1FAIpQLScuEBhcNObCAIADj_aQKJl-DTv9t6Vrz-JDC-fNmiCu3ujBhg/viewform?usp=pp_url&entry.534371074="
+          url: " "
         },
         join: {
           award_name: "參加獎",
